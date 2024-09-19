@@ -1,8 +1,0 @@
-﻿  main.cpp
-C:\Users\16221\Documents\文件\24年\计算机系统基础\第一次上机\编写位运算程序\def.hpp(102,21): warning C4554: “<<”: 检查运算符优先级是否存在的可能的错误；使用括号阐明优先级
-  (编译源文件“main.cpp”)
-  
-C:\Users\16221\Documents\文件\24年\计算机系统基础\第一次上机\编写位运算程序\def.hpp(112,11): warning C4244: “+=”: 从“double”转换到“int”，可能丢失数据
-  (编译源文件“main.cpp”)
-  
-  编写位运算程序.vcxproj -> C:\Users\16221\Documents\文件\24年\计算机系统基础\第一次上机\编写位运算程序\x64\Debug\编写位运算程序.exe
