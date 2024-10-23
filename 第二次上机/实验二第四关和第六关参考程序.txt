@@ -1,0 +1,73 @@
+实验第四关func函数说明
+
+int func4(int val, int low, int high)
+{
+    int mid;
+
+    mid = low + (high - low) / 2;
+
+    if (mid > val)
+	return func4(val, low, mid-1) << 1;
+    else if (mid < val)
+	return (func4(val, mid+1, high) << 1) + 1;
+    else
+	return 0;
+}
+
+
+实验第六关：
+/*以下六个节点____________处，请通过查看内存，确定其值，listNode的定义请查看support.h文件*/
+listNode node6 = {_____________, 6, NULL};   
+listNode node5 = {_____________, 5, &node6};
+listNode node4 = {_____________, 4, &node5};
+listNode node3 = {_____________, 3, &node4};
+listNode node2 = {_____________, 2, &node3};
+listNode node1 = {_____________, 1, &node2};
+
+void phase_6(char *input)
+{
+    listNode *start = &node1;
+    listNode *p;
+    int indices[6];
+    listNode *pointers[6];
+    int i, j;
+
+    read_six_numbers(input, indices);  /*函数的调用可查看support.c*/
+
+    /* Check the range of the indices and whether or not any repeat */
+    for (i = 0; i < 6; i++) {
+	if ((____________ || ______________ > 6))
+	    explode_bomb();
+	
+	for (j = i + 1; j < 6; j++) {
+	    if (indices[i] == indices[j])
+		explode_bomb();
+	}
+    }
+
+    /* Rearrange the list according to the user input */
+    for (i = 0; i < 6; i++) {
+	p = start;
+	for (j = 1; j < indices[i]; j++)
+	   _____________________
+	pointers[i] = p;
+    }
+
+    start = pointers[0];
+    p = start;
+
+    for (i = 1; i < 6; i++) {
+	p->next = ________________;
+	p = p->next;
+    }
+    p->next = NULL;
+
+    /* Now see if the list is sorted in descending order */
+    p = start;
+    for (i = 0; i < 5; i++) {
+	if (p->value < ____________________)
+	    explode_bomb();
+	
+	p = p->next;
+    }
+}
