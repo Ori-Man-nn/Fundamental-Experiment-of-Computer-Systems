@@ -1,0 +1,7 @@
+U202315557
+Instructions set architecture
+7 5 12 17 29 46
+5 513
+14 7 str
+mvcdxw
+2 5 6 3 1 4 
